@@ -4,4 +4,4 @@ This is an openFrameworks application built for the Roja Art Lab 2018 artist res
 
 The application loads data and creates an animated texture for projection mapping with the ofxPiMapper addon.
 
-[License](./LICENSE): MIT
+[License: MIT](./LICENSE)
