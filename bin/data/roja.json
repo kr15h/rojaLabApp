@@ -1,0 +1,62 @@
+[
+  {
+    "year": 2008,
+    "income": 2242288,
+    "religion": 925833,
+    "education": 1650207
+  },
+  {
+    "year": 2009,
+    "income": 1452903,
+    "religion": 876227,
+    "education": 1890893
+  },
+  {
+    "year": 2010,
+    "income": 1781488,
+    "religion": 517718,
+    "education": 2267038
+  },
+  {
+    "year": 2011,
+    "income": 1291727,
+    "religion": 289138,
+    "education": 1395179
+  },
+  {
+    "year": 2012,
+    "income": 1409319,
+    "religion": 399817,
+    "education": 1331536
+  },
+  {
+    "year": 2013,
+    "income": 1643828,
+    "religion": 400295,
+    "education": 1437754
+  },
+  {
+    "year": 2014,
+    "income": 1794719,
+    "religion": 335293,
+    "education": 1434930
+  },
+  {
+    "year": 2015,
+    "income": 1806536,
+    "religion": 339328,
+    "education": 1520045
+  },
+  {
+    "year": 2016,
+    "income": 1809952,
+    "religion": 365908,
+    "education": 1502851
+  },
+  {
+    "year": 2017,
+    "income": 1896053,
+    "religion": 1006418,
+    "education": 1730471
+  }
+]
