@@ -96,9 +96,18 @@ void RojaDataSource::update(){
 void RojaDataSource::draw(){
     ofSetColor(0, 0, 0, 25);
     ofDrawRectangle(0, 0, getWidth(), getHeight());
-    ofSetColor(255);
     
+    ofSetColor(255);
     ofDrawCircle(posIncome, dataCurrent.income * objectRefSize);
     ofDrawCircle(posEducation, dataCurrent.education * objectRefSize);
     ofDrawCircle(posReligion, dataCurrent.religion * objectRefSize);
+
+    ofDrawBitmapStringHighlight("City: Roja, Latvia", 10, 20, ofColor::black);
+    ofDrawBitmapStringHighlight("Year: " + ofToString(dataCurrent.year), 10, 40, ofColor::black);
+    ofDrawBitmapStringHighlight("Income: " + ofToString(
+        (float)data[dataCurrent.year].income * dataCurrent.income, 0), 10, 60, ofColor::black);
+    ofDrawBitmapStringHighlight("Exp Education: " + ofToString(
+        (float)data[dataCurrent.year].education * dataCurrent.education, 0), 10, 80, ofColor::black);
+    ofDrawBitmapStringHighlight("Exp Religion: " + ofToString(
+        (float)data[dataCurrent.year].religion * dataCurrent.religion, 0), 10, 100, ofColor::black);
 }

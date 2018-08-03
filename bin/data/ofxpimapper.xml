@@ -203,4 +203,49 @@
             <source-name>Roja Data Source</source-name>
         </source>
     </surface>
+    <surface type="1">
+        <vertices>
+            <vertex>
+                <x>652.000000000</x>
+                <y>625.000000000</y>
+            </vertex>
+            <vertex>
+                <x>856.000000000</x>
+                <y>626.000000000</y>
+            </vertex>
+            <vertex>
+                <x>855.000000000</x>
+                <y>735.000000000</y>
+            </vertex>
+            <vertex>
+                <x>651.000000000</x>
+                <y>734.000000000</y>
+            </vertex>
+        </vertices>
+        <texCoords>
+            <texCoord>
+                <x>0.010000000</x>
+                <y>0.012000000</y>
+            </texCoord>
+            <texCoord>
+                <x>0.379999995</x>
+                <y>0.012000000</y>
+            </texCoord>
+            <texCoord>
+                <x>0.379999995</x>
+                <y>0.217999995</y>
+            </texCoord>
+            <texCoord>
+                <x>0.010000000</x>
+                <y>0.217999995</y>
+            </texCoord>
+        </texCoords>
+        <source>
+            <source-type>fbo</source-type>
+            <source-name>Roja Data Source</source-name>
+        </source>
+        <properties>
+            <perspectiveWarping>1</perspectiveWarping>
+        </properties>
+    </surface>
 </surfaces>
