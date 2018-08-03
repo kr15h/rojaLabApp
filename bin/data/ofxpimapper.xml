@@ -30,7 +30,7 @@
         </texCoords>
         <source>
             <source-type>fbo</source-type>
-            <source-name>The Source</source-name>
+            <source-name>Roja Data Source</source-name>
         </source>
     </surface>
     <surface type="0">
@@ -64,7 +64,7 @@
         </texCoords>
         <source>
             <source-type>fbo</source-type>
-            <source-name>The Source</source-name>
+            <source-name>Roja Data Source</source-name>
         </source>
     </surface>
     <surface type="0">
@@ -98,7 +98,7 @@
         </texCoords>
         <source>
             <source-type>fbo</source-type>
-            <source-name>The Source</source-name>
+            <source-name>Roja Data Source</source-name>
         </source>
     </surface>
     <surface type="0">
@@ -132,7 +132,7 @@
         </texCoords>
         <source>
             <source-type>fbo</source-type>
-            <source-name>The Source</source-name>
+            <source-name>Roja Data Source</source-name>
         </source>
     </surface>
     <surface type="0">
@@ -166,7 +166,7 @@
         </texCoords>
         <source>
             <source-type>fbo</source-type>
-            <source-name>The Source</source-name>
+            <source-name>Roja Data Source</source-name>
         </source>
     </surface>
     <surface type="0">
@@ -200,7 +200,7 @@
         </texCoords>
         <source>
             <source-type>fbo</source-type>
-            <source-name>The Source</source-name>
+            <source-name>Roja Data Source</source-name>
         </source>
     </surface>
 </surfaces>

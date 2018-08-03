@@ -45,14 +45,47 @@ void RojaDataSource::setup(){
             << "\t" << normalBlock.religion 
             << std::endl;
     }
+
+    // Year in the dataCurrent serves as target indicator.
+    dataCurrent.year = dataNormal.begin()->second.year;
+    dataCurrent.income = 0.0f;
+    dataCurrent.education = 0.0f;
+    dataCurrent.religion = 0.0f;
+
+    dataFrameRate = DATA_FRAME_RATE;
+    easingMultiplier = DATA_EASING_MULTIPLIER;
+    lastFrameUpdate = ofGetElapsedTimef();
+    objectRefSize = DATA_OBJECT_REF_SIZE;
 }
 
 void RojaDataSource::update(){
-    
+    float now = ofGetElapsedTimef();
+    float frameLength = 1.0f / dataFrameRate;
+    float deltaTime = now - lastFrameUpdate;
+    if(deltaTime > frameLength){
+        lastFrameUpdate = now;
+        dataCurrent.year++;
+        if(dataCurrent.year > dataNormal.rbegin()->second.year){
+            dataCurrent.year = dataNormal.begin()->second.year;
+        }
+    }
+
+    float deltaIncome = dataNormal[dataCurrent.year].income - dataCurrent.income;
+    float deltaEducation = dataNormal[dataCurrent.year].education - dataCurrent.education;
+    float deltaReligion = dataNormal[dataCurrent.year].religion - dataCurrent.religion;
+
+    deltaIncome *= easingMultiplier;
+    deltaEducation *= easingMultiplier;
+    deltaReligion *= easingMultiplier;
+
+    dataCurrent.income = dataNormal[dataCurrent.year].income - deltaIncome;
+    dataCurrent.education = dataNormal[dataCurrent.year].education - deltaEducation;
+    dataCurrent.religion = dataNormal[dataCurrent.year].religion - deltaReligion;
 }
 
 void RojaDataSource::draw(){
     ofClear(0, 0, 0, 0);
     ofSetColor(255, 255, 0);
-    ofDrawRectangle(0, 0, getWidth(), getHeight());
+    
+    ofDrawCircle(getWidth()/2, getHeight()/2, dataCurrent.income * objectRefSize);
 }
