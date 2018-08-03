@@ -56,6 +56,16 @@ void RojaDataSource::setup(){
     easingMultiplier = DATA_EASING_MULTIPLIER;
     lastFrameUpdate = ofGetElapsedTimef();
     objectRefSize = DATA_OBJECT_REF_SIZE;
+
+    posIncome = glm::vec2(
+        (float)getWidth() / 2.0f, 
+        objectRefSize + 50.0f);
+    posEducation = glm::vec2(
+        objectRefSize + 50.0f, 
+        (float)getHeight() - objectRefSize - 50.0f);
+    posReligion = glm::vec2(
+        (float)getWidth() - objectRefSize - 50.0f, 
+        (float)getHeight() - objectRefSize - 50.0f);
 }
 
 void RojaDataSource::update(){
@@ -87,5 +97,7 @@ void RojaDataSource::draw(){
     ofClear(0, 0, 0, 0);
     ofSetColor(255, 255, 0);
     
-    ofDrawCircle(getWidth()/2, getHeight()/2, dataCurrent.income * objectRefSize);
+    ofDrawCircle(posIncome, dataCurrent.income * objectRefSize);
+    ofDrawCircle(posEducation, dataCurrent.education * objectRefSize);
+    ofDrawCircle(posReligion, dataCurrent.religion * objectRefSize);
 }
