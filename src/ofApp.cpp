@@ -2,6 +2,8 @@
 
 void ofApp::setup(){
 	ofBackground(0);
+    ofSetCircleResolution(180);
+
     mapper.registerFboSource(sourceA);
     mapper.registerFboSource(sourceB);
     mapper.registerFboSource(sourceC);

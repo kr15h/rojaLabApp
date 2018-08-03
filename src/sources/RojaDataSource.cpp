@@ -94,8 +94,9 @@ void RojaDataSource::update(){
 }
 
 void RojaDataSource::draw(){
-    ofClear(0, 0, 0, 0);
-    ofSetColor(255, 255, 0);
+    ofSetColor(0, 0, 0, 25);
+    ofDrawRectangle(0, 0, getWidth(), getHeight());
+    ofSetColor(255);
     
     ofDrawCircle(posIncome, dataCurrent.income * objectRefSize);
     ofDrawCircle(posEducation, dataCurrent.education * objectRefSize);
