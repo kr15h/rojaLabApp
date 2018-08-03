@@ -110,4 +110,8 @@ void RojaDataSource::draw(){
         (float)data[dataCurrent.year].education * dataCurrent.education, 0), 10, 80, ofColor::black);
     ofDrawBitmapStringHighlight("Exp Religion: " + ofToString(
         (float)data[dataCurrent.year].religion * dataCurrent.religion, 0), 10, 100, ofColor::black);
+
+    ofDrawBitmapStringHighlight("Income", posIncome, ofColor::black);
+    ofDrawBitmapStringHighlight("Exp Education", posEducation, ofColor::black);
+    ofDrawBitmapStringHighlight("Exp Religion", posReligion, ofColor::black);
 }
