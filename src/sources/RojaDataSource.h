@@ -8,6 +8,10 @@
 #define DATA_EASING_MULTIPLIER 0.85f
 #define DATA_OBJECT_REF_SIZE 100.0f
 
+#define SOUND_INCOME "audio/17072__fractal-dimension__low-freq-rumble.wav"
+#define SOUND_EDUCATION "audio/17070__fractal-dimension__arpeggio-pitch-down_01.wav"
+#define SOUND_RELIGION "audio/17067__fractal-dimension__analog-bubbles-3_01.wav"
+
 struct RojaDataBlock {
     int year;
     int income;
@@ -40,4 +44,8 @@ public:
     glm::vec2 posIncome;
     glm::vec2 posEducation;
     glm::vec2 posReligion;
+
+    ofSoundPlayer soundIncome;
+    ofSoundPlayer soundEducation;
+    ofSoundPlayer soundReligion;
 };

@@ -5,3 +5,5 @@ This is an openFrameworks application built for the Roja Art Lab 2018 artist res
 The application loads data and creates an animated texture for projection mapping with the ofxPiMapper addon.
 
 [License: MIT](./LICENSE)
+
+Audio samples by [fractal_dimension](https://freesound.org/people/fractal_dimension/sounds/17067/) on Freesound.

@@ -66,6 +66,26 @@ void RojaDataSource::setup(){
     posReligion = glm::vec2(
         (float)getWidth() - objectRefSize - 50.0f, 
         (float)getHeight() - objectRefSize - 50.0f);
+
+    soundIncome.load(SOUND_INCOME);
+    soundEducation.load(SOUND_EDUCATION);
+    soundReligion.load(SOUND_RELIGION);
+
+    soundIncome.setVolume(0.33f);
+    soundEducation.setVolume(0.33f);
+    soundReligion.setVolume(0.33f);
+
+    soundIncome.setLoop(true);
+    soundEducation.setLoop(true);
+    soundReligion.setLoop(true);
+
+    soundIncome.setSpeed(dataCurrent.income);
+    soundEducation.setSpeed(dataCurrent.education);
+    soundReligion.setSpeed(dataCurrent.religion);
+
+    soundIncome.play();
+    soundEducation.play();
+    soundReligion.play();
 }
 
 void RojaDataSource::update(){
@@ -91,6 +111,10 @@ void RojaDataSource::update(){
     dataCurrent.income = dataNormal[dataCurrent.year].income - deltaIncome;
     dataCurrent.education = dataNormal[dataCurrent.year].education - deltaEducation;
     dataCurrent.religion = dataNormal[dataCurrent.year].religion - deltaReligion;
+
+    soundIncome.setSpeed(pow(dataCurrent.income, 2.0f));
+    soundEducation.setSpeed(pow(dataCurrent.education, 2.0f));
+    soundReligion.setSpeed(pow(dataCurrent.religion, 2.0f));
 }
 
 void RojaDataSource::draw(){
